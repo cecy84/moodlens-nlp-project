@@ -3,7 +3,7 @@ from preprocessing import TextPreprocessor
 import streamlit as st
 import joblib
 from lime.lime_text import LimeTextExplainer
-import streamlit.components.v1 as components
+import streamlit.components.v1 as componentsa
 
 # Download stopwords
 nltk.download('punkt')  # Downloads Punkt tokenizer
