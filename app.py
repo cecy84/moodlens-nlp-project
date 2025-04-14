@@ -5,6 +5,15 @@ import joblib
 from lime.lime_text import LimeTextExplainer
 import streamlit.components.v1 as componentsa
 
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
+
+pipeline = Pipeline([
+    ('preprocessor', TextPreprocessor()),
+    ('model', LogisticRegression())
+])
+
+
 # Download stopwords
 nltk.download('punkt')  # Downloads Punkt tokenizer
 nltk.download('punkt_tab')  # Ensures punkt_tab is available
